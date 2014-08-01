@@ -1,7 +1,7 @@
 module.exports = function(app) {
   var mincer = require('mincer'),
       path   = require('path'),
-      debug  = require('debug')('gruessli:mincer');
+      debug  = require('debug')('myApp:mincer');
 
   mincer.logger.use({
     error: function(level, msg) {

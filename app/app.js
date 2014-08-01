@@ -10,7 +10,7 @@ var express           = require('express')
   , path              = require('path')
   , fs                = require('fs')
   , logger            = require("morgan")
-  , debug             = require('debug')('app');
+  , debug             = require('debug')('myApp');
 
 var app = express();
 var env = process.env.NODE_ENV || 'development';
