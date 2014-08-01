@@ -1,0 +1,7 @@
+node_modules
+.vagrant
+.DS_Store
+.sass-cache
+npm-debug.log
+/tmp
+app/cache

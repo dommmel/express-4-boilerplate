@@ -1,0 +1,32 @@
+/*
+ * Sass helper for asset paths
+ *
+ * EXAMPLE USAGE:
+ * 
+ *   div {
+ *	  background-image: url(asset-path('bg.png'));
+ *   }
+ */
+@function asset-path($file) {
+  @return "<%- asset_path('#{$file}') %>";
+}
+
+/* 
+ * Sass helper to format font paths. 
+ *
+ * EXAMPLE USAGE:
+ *
+ * @font-face {
+ *     font-family: "MyFont";
+ *     src: url(font-path('myfont.eot'));
+ *     src: url(font-path('myfont.eot?#iefix')) format('embedded-opentype'),
+ *          url(font-path('myfont.woff')) format('woff'),
+ *          url(font-path('myfont.ttf')) format('truetype'),
+ *          url(font-path('myfont.svg#myfont')) format('svg');
+ *    font-weight: normal;
+ *     font-style: normal;
+ */
+@function font-path($path) {
+  @return "<%- asset_path('#{$path}'.replace(/[#?].*$/, '')) + '#{$path}'.replace(/(^[^#?]*)([#?]?.*$)/, '$2') %>";
+}
+
